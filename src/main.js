@@ -3,6 +3,7 @@ hrefs.forEach((href) => {
   href.addEventListener(
     "click",
     (event) => {
+      Enabler.counter(window.bType, true);
       event.stopPropagation();
       window.open(href.dataset.href, "_blank");
       Enabler.exit(href.dataset.href);
