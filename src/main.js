@@ -6,7 +6,20 @@ hrefs.forEach((href) => {
       Enabler.counter(window.bType, true);
       event.stopPropagation();
       window.open(href.dataset.href, "_blank");
-      Enabler.exit(href.dataset.href);
+      Enabler.exit("Background Exit");
+    },
+    false
+  );
+});
+
+const sameHrefs = document.querySelectorAll("[data-same-href]");
+sameHrefs.forEach((href) => {
+  href.addEventListener(
+    "click",
+    (event) => {
+      Enabler.counter(window.bType, true);
+      event.stopPropagation();
+      window.open(href.dataset.sameHref, "_blank");
     },
     false
   );

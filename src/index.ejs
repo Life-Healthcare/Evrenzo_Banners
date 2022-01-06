@@ -44,7 +44,6 @@
       function addListeners() {
         document.getElementById("<%= type %>").addEventListener('click', counterClickHandler);
         document.getElementById("bg-exit").addEventListener('click', exitClickHandler);
-        document.querySelector(".bg-exit").addEventListener('click', exitClickHandler);
       }
 
       function exitClickHandler() {
@@ -64,7 +63,7 @@
 
 </head>
 <body id="<%= type %>">
-<div id="container" class="container container-<%= type %>" data-href="<%= require("./assets/pi.pdf") %>">
+<div id="container" class="container container-<%= type %>" data-same-href="<%= require("./assets/pi.pdf") %>">
     <main id="carousel" data-slide-index="0"
           style="background-image: url('<%= require('./config/config').backgroundImage %>')">
         <% require('./config/config').slides[type].forEach((slide, index) => { %>
