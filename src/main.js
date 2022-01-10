@@ -6,7 +6,7 @@ hrefs.forEach((href) => {
       Enabler.counter(window.bType, true);
       event.stopPropagation();
       window.open(href.dataset.href, "_blank");
-      Enabler.exit("Background Exit");
+      // Enabler.exit("Background Exit");
     },
     false
   );
