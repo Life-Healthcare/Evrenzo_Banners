@@ -59,7 +59,6 @@
       }
 
       function piClickHandler(event) {
-        console.log(event.data)
         Enabler.counter("<%= type %>", true)
         Enabler.exit('Pi Exit')
         event.stopPropagation()
@@ -71,8 +70,8 @@
       }
     </script>
 
-<!--    data-same-href="<%= require("./assets/pi.pdf") %>-->
-<!--    data-href="https://www.medicines.org.uk/emc/product/12835"-->
+<!--    "https://www.medicines.org.uk/emc/product/12835"-->
+<!--    https://dhgd52pup2eiv.cloudfront.net/23ffe42b-4e89-48e1-b8d8-08b726ed94c1/7707651c-46f9-4279-8009-4546b4b54878/7707651c-46f9-4279-8009-4546b4b54878_source__v.pdf-->
 </head>
 <body id="<%= type %>">
 <div id="container" class="container container-<%= type %>">
