@@ -1,30 +1,3 @@
-const hrefs = document.querySelectorAll("[data-href]");
-hrefs.forEach((href) => {
-  href.addEventListener(
-    "click",
-    (event) => {
-      Enabler.counter(window.bType, true);
-      event.stopPropagation();
-      window.open(href.dataset.href, "_blank");
-      // Enabler.exit("Background Exit");
-    },
-    false
-  );
-});
-
-const sameHrefs = document.querySelectorAll("[data-same-href]");
-sameHrefs.forEach((href) => {
-  href.addEventListener(
-    "click",
-    (event) => {
-      Enabler.counter(window.bType, true);
-      event.stopPropagation();
-      window.open(href.dataset.sameHref, "_blank");
-    },
-    false
-  );
-});
-
 function main() {
   const carousel = document.querySelector("#carousel");
   const slides = carousel.querySelectorAll("section");
@@ -32,9 +5,9 @@ function main() {
   const externalState = window.state || {};
 
   const state = {
-    autoPlay: window.mode === "production" ? true : false,
+    autoPlay: window.mode === "production" ? true : true,
     loop: window.mode === "production" ? false : false,
-    slideIndex: window.mode === "production" ? -1 : 2,
+    slideIndex: window.mode === "production" ? -1 : -1,
     ...externalState,
   };
 

@@ -44,15 +44,25 @@
       function addListeners() {
         document.getElementById("<%= type %>").addEventListener('click', counterClickHandler);
         document.getElementById("bg-exit").addEventListener('click', exitClickHandler);
+        document.getElementById("container").addEventListener('click', piClickHandler);
       }
 
-      function exitClickHandler() {
-        <!--Enabler.counter("<%= type %>", true);-->
-        Enabler.exit('Background Exit');
-      }
-
-      function counterClickHandler() {
+      function exitClickHandler(event) {
         Enabler.counter("<%= type %>", true);
+        Enabler.exit('Background Exit');
+        event.stopPropagation()
+      }
+
+      function counterClickHandler(event) {
+        Enabler.counter("<%= type %>", true);
+        event.stopPropagation()
+      }
+
+      function piClickHandler(event) {
+        console.log(event.data)
+        Enabler.counter("<%= type %>", true)
+        Enabler.exit('Pi Exit')
+        event.stopPropagation()
       }
 
       function politeInit(){
@@ -61,9 +71,11 @@
       }
     </script>
 
+<!--    data-same-href="<%= require("./assets/pi.pdf") %>-->
+<!--    data-href="https://www.medicines.org.uk/emc/product/12835"-->
 </head>
 <body id="<%= type %>">
-<div id="container" class="container container-<%= type %>" data-same-href="<%= require("./assets/pi.pdf") %>">
+<div id="container" class="container container-<%= type %>">
     <main id="carousel" data-slide-index="0"
           style="background-image: url('<%= require('./config/config').backgroundImage %>')">
         <% require('./config/config').slides[type].forEach((slide, index) => { %>

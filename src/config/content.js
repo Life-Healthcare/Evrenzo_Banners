@@ -9,7 +9,7 @@ const content = {
   },
   hcpDisclaimer: `
     For Healthcare Professionals Only<br/>
-    <span class="highlight-primary bg-exit" data-exit-name="UK Prescribing Information and Adverse">Click here for UK Prescribing Information and Adverse <span>Event Reporting</span></span>
+    <span class="highlight-primary" data-exit-name="UK Prescribing Information and Adverse">Click here for UK Prescribing Information and Adverse <span>Event Reporting</span></span>
   `,
   intro: `
     <h2 class="prelude"><span>EVRENZO (roxadustat) is </span><span>indicated for treatment of adult patients with symptomatic </span>anaemia associated with CKD<sup>1</sup></h2>
@@ -38,7 +38,7 @@ const content = {
     <div class="disclaimer">
         <p>This advert is intended for UK and EU audience only.</p>
         <p>Please note that indications and availability may vary in different countries.</p>
-        <p><span id="bg-exit" class="underline bg-exit" data-exit-name="Refer to your local summary of product characteristics" data-href="https://www.medicines.org.uk/emc/product/12835">Refer to your local summary of product characteristics/</span>prescribing information for details.</p>
+        <p><span id="bg-exit" class="underline" data-exit-name="Refer to your local summary of product characteristics">Refer to your local summary of product characteristics/</span>prescribing information for details.</p>
     </div>
   `,
 };
